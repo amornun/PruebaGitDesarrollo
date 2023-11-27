@@ -15,10 +15,15 @@ public class GitColaborativo {
 		//cliente introduce si es vip o no
 		System.out.println("Introduzca 1 si es VIP o 2 si no lo es: ");
 		int vip = sc.nextInt();
+
+		//variable precio por km
+
+		double precio1 = 0.30;
+		double precio2 = 0.15;
 		
 		//variables de tipo de facturacion
-		double tarifa1 = (km - 300) * 0.30 + (200);
-		double tarifa2 = (km - 1000) * 0.15 + (300 + 200);
+		double tarifa1 = (km - 300) * precio1 + (200);
+		double tarifa2 = (km - 1000) * precio2 + (300 + 200);
 		
 		// variables km
 		int variableKm1 = 1000;
