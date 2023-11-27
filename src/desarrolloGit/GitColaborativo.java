@@ -6,7 +6,7 @@ public class GitColaborativo {
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
 		double descvip = 0.95;
-		int km = 0;
+		double km = 0;
 		int vip = 0;
 		double tipoFactura1 = 0;
 		double tipoFactura2 = 0;
