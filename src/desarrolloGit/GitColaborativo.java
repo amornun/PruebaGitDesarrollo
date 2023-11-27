@@ -26,21 +26,23 @@ public class GitColaborativo {
 		if((km < 300) && (vip == 1))
 		System.out.println("Total:" + preciobase * descvip );
 		
-		else if((km < 300) && (vip == 2))
-		System.out.println("Total: " + preciobase);
+			else if((km < 300) && (vip == 2))
+				System.out.println("Total: " + preciobase);
 		
-		else if((km >=300) && (km <= 1000) && (vip == 2 ))
-		System.out.println("Total no vip: " + (p1 * iva));
+			else if((km >=300) && (km <= 1000) && (vip == 2 ))
+				System.out.println("Total no vip: " + (p1 * iva));
 		
-		else if((km >= 300) && (km <= 1000) && (vip == 1))
-		System.out.println("Total:" + (p1 * descvip) * iva );
+			else if((km >= 300) && (km <= 1000) && (vip == 1))
+				System.out.println("Total:" + (p1 * descvip) * iva );
 		
-		else if((km > 1000) && (vip == 2))
-		System.out.println("Total no vip" + (p2 * iva));
+			else if((km > 1000) && (vip == 2))
+				System.out.println("Total no vip" + (p2 * iva));
 		
-		else if((km > 1000) && (vip == 1))
-		System.out.println("Total vip: " + (p2 * descvip ) * iva );
-			
+			else if((km > 1000) && (vip == 1))
+				System.out.println("Total vip: " + (p2 * descvip ) * iva );
+		
+				
+				
 		sc.close();
 	
 	}
