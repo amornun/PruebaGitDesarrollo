@@ -8,7 +8,7 @@ public class GitColaborativo {
 		
 		var sc = new Scanner(System.in);
 		
-		//cliente introduce los km
+		//cliente introduce los km  (Para que de conflicto)
 		System.out.println("Introduzca el numero de km que ha conducido: ");
 		int kmConducidos = sc.nextInt();
 		
