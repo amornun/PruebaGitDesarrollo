@@ -5,8 +5,14 @@ public class GitColaborativo {
 
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
-		
+		//Añadimos las constante faltantes y las implementamos en el codigo en vez de números sueltos
 		double descvip = 0.95;
+		double cantidadFija=200;
+		double limitKilometro=300;
+		double costoAdicional=0.30;
+		double limitKilometro2=1000;
+		double costoAdicional2=0.15;
+		double iva=1.21;
 		
 		//cliente introduce los km
 		System.out.println("Introduzca el numero de km que ha conducido: ");
@@ -17,27 +23,27 @@ public class GitColaborativo {
 		int vip = sc.nextInt();
 		
 		//variables de tipo de facturacion
-		double p1 = (km - 300) * 0.30 + (200);
-		double p2 = (km - 1000) * 0.15 + (300 + 200);
+		double p1 = (km - limitKilometro) * costoAdicional + (cantidadFija);
+		double p2 = (km - limitKilometro2) * costoAdicional2 + (limitKilometro + cantidadFija);
 		
 		//Cálculo facturación y visualización del total
-		if((km < 300) && (vip == 1))
-		System.out.println("Total:" + 200 * descvip );
+		if((km < limitKilometro) && (vip == 1))
+		System.out.println("Total:" + cantidadFija * descvip );
 		
-		else if((km < 300) && (vip == 2))
-		System.out.println("Total: " + 200);
+		else if((km < limitKilometro) && (vip == 2))
+		System.out.println("Total: " + cantidadFija);
 		
-		else if((km >=300) && (km <= 1000) && (vip == 2 ))
-		System.out.println("Total no vip: " + (p1 * 1.21));
+		else if((km >=limitKilometro) && (km <= limitKilometro2) && (vip == 2 ))
+		System.out.println("Total no vip: " + (p1 * iva));
 		
-		else if((km >= 300) && (km <= 1000) && (vip == 1))
-		System.out.println("Total:" + (p1 * 0.95) * 1.21 );
+		else if((km >= limitKilometro) && (km <= limitKilometro2) && (vip == 1))
+		System.out.println("Total:" + (p1 * descvip) * iva );
 		
-		else if((km > 1000) && (vip == 2))
-		System.out.println("Total no vip" + (p2 * 1.21));
+		else if((km > limitKilometro2) && (vip == 2))
+		System.out.println("Total no vip" + (p2 * iva));
 		
-		else if((km > 1000) && (vip == 1))
-		System.out.println("Total vip: " + (p2 * 0.95 ) * 1.21 );
+		else if((km > limitKilometro2) && (vip == 1))
+		System.out.println("Total vip: " + (p2 * descvip ) * iva );
 			
 		sc.close();
 	
