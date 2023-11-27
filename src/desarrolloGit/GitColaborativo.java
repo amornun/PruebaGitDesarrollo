@@ -18,35 +18,35 @@ public class GitColaborativo {
 
 		// cliente introduce los km
 		System.out.println("Introduzca el numero de km que ha conducido: ");
-		int km = sc.nextInt();
+		double km = sc.nextDouble();
 
 		// variables de tipo de facturacion
 
 		double p1 = (km - TRESCIENTOS) * COSTE_ADICIONAL + (PRIMEROSTRESCIENTOSK);
 		double p2 = (km - MIL) * MONTO_ADICIONAL + (TRESCIENTOS + PRIMEROSTRESCIENTOSK);
 
-		// cliente introduce si es vip o no
+		//cliente introduce si es vip o no
 		System.out.println("Introduzca 1 si es VIP o 2 si no lo es: ");
 		int vip = sc.nextInt();
 
 		// Cálculo facturación y visualización del total
 		if ((km < TRESCIENTOS) && (vip == 1))
-			System.out.println("Total:" + PRIMEROSTRESCIENTOSK * DESCVIP);
+			System.out.println("Total:" + PRIMEROSTRESCIENTOSK * DESCVIP + "€");
 
 		else if ((km < TRESCIENTOS) && (vip == 2))
-			System.out.println("Total: " + PRIMEROSTRESCIENTOSK);
+			System.out.println("Total: " + PRIMEROSTRESCIENTOSK + "€");
 
 		else if ((km >= TRESCIENTOS) && (km <= MIL) && (vip == 2))
-			System.out.println("Total no vip: " + (p1 * IVA));
+			System.out.println("Total no vip: " + (p1 * IVA + "€"));
 
 		else if ((km >= TRESCIENTOS) && (km <= MIL) && (vip == 1))
-			System.out.println("Total:" + (p1 * DESCVIP) * IVA);
+			System.out.println("Total:" + (p1 * DESCVIP) * IVA + "€");
 
 		else if ((km > MIL) && (vip == 2))
-			System.out.println("Total no vip" + (p2 * IVA));
+			System.out.println("Total no vip" + (p2 * IVA + "€"));
 
 		else if ((km > MIL) && (vip == 1))
-			System.out.println("Total vip: " + (p2 * DESCVIP) * IVA);
+			System.out.println("Total vip: " + (p2 * DESCVIP) * IVA + "€");
 
 		sc.close();
 

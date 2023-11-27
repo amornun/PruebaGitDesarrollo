@@ -4,6 +4,8 @@
 CAMBIOS AÑADIDOS:
 
 Cambiado todos los números sueltos por constantes y arreglada indentación.
+Solucionado conficto [27/11/2023]
+
 
 Una compañía dedicada al alquiler por largos periodos de automóviles cobra:
 - Una cantidad fijo de 200€ para los primeros 300 km de recorrido.
