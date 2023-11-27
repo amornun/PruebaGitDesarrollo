@@ -10,7 +10,11 @@ public class GitColaborativo {
 		
 		//cliente introduce los km
 		System.out.println("Introduzca el numero de km que ha conducido: ");
+<<<<<<< HEAD
 		int kmConducidos = sc.nextInt();
+=======
+		double km = sc.nextDouble();
+>>>>>>> 2e7fbdba0eded0754636423bf8c4babc4450c130
 		
 		//cliente introduce si es vip o no
 		System.out.println("Introduzca 1 si es VIP o 2 si no lo es: ");
