@@ -1,6 +1,12 @@
 # PruebaGitDesarrollo
 ## ¿En qué consiste el proyecto?
 
+CAMBIOS AÑADIDOS:
+
+Cambiado todos los números sueltos por constantes y arreglada indentación.
+Solucionado conficto [27/11/2023]
+
+
 Una compañía dedicada al alquiler por largos periodos de automóviles cobra:
 - Una cantidad fijo de 200€ para los primeros 300 km de recorrido.
 - Para más de 300 km y hasta 1000 km, cobra un coste adicional de 0.30€ por cada kilómetro en exceso sobre 300.
