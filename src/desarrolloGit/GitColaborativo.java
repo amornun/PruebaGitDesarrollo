@@ -17,8 +17,8 @@ public class GitColaborativo {
 		int vip = sc.nextInt();
 		
 		//variables de tipo de facturacion
-		double p1 = (km - 300) * 0.30 + (200);
-		double p2 = (km - 1000) * 0.15 + (300 + 200);
+		double tarifa1 = (km - 300) * 0.30 + (200);
+		double tarifa2 = (km - 1000) * 0.15 + (300 + 200);
 		
 		//Cálculo facturación y visualización del total
 		if((km < 300) && (vip == 1))
@@ -28,16 +28,16 @@ public class GitColaborativo {
 		System.out.println("Total: " + 200);
 		
 		else if((km >=300) && (km <= 1000) && (vip == 2 ))
-		System.out.println("Total no vip: " + (p1 * 1.21));
+		System.out.println("Total no vip: " + (tarifa1 * 1.21));
 		
 		else if((km >= 300) && (km <= 1000) && (vip == 1))
-		System.out.println("Total:" + (p1 * 0.95) * 1.21 );
+		System.out.println("Total:" + (tarifa1 * 0.95) * 1.21 );
 		
 		else if((km > 1000) && (vip == 2))
-		System.out.println("Total no vip" + (p2 * 1.21));
+		System.out.println("Total no vip" + (tarifa2 * 1.21));
 		
 		else if((km > 1000) && (vip == 1))
-		System.out.println("Total vip: " + (p2 * 0.95 ) * 1.21 );
+		System.out.println("Total vip: " + (tarifa2 * 0.95 ) * 1.21 );
 			
 		sc.close();
 	
