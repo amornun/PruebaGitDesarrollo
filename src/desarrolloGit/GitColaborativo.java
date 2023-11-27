@@ -1,46 +1,54 @@
 package desarrolloGit;
+
 import java.util.Scanner;
 
 public class GitColaborativo {
 
 	public static void main(String[] args) {
-		var sc = new Scanner(System.in);
 		
-		double descvip = 0.95;
+		var sc = new Scanner(System.in);
 		
 		//cliente introduce los km
 		System.out.println("Introduzca el numero de km que ha conducido: ");
-		int km = sc.nextInt();
+		int kmConducidos = sc.nextInt();
 		
 		//cliente introduce si es vip o no
 		System.out.println("Introduzca 1 si es VIP o 2 si no lo es: ");
-		int vip = sc.nextInt();
+		int esVip = sc.nextInt();
 		
-		//variables de tipo de facturacion
-		double p1 = (km - 300) * 0.30 + (200);
-		double p2 = (km - 1000) * 0.15 + (300 + 200);
+		calculoFacturacion(kmConducidos, esVip);
 		
-		//Cálculo facturación y visualización del total
-		if((km < 300) && (vip == 1))
-		System.out.println("Total:" + 200 * descvip );
-		
-		else if((km < 300) && (vip == 2))
-		System.out.println("Total: " + 200);
-		
-		else if((km >=300) && (km <= 1000) && (vip == 2 ))
-		System.out.println("Total no vip: " + (p1 * 1.21));
-		
-		else if((km >= 300) && (km <= 1000) && (vip == 1))
-		System.out.println("Total:" + (p1 * 0.95) * 1.21 );
-		
-		else if((km > 1000) && (vip == 2))
-		System.out.println("Total no vip" + (p2 * 1.21));
-		
-		else if((km > 1000) && (vip == 1))
-		System.out.println("Total vip: " + (p2 * 0.95 ) * 1.21 );
-			
 		sc.close();
 	
+	}
+	
+	public static void calculoFacturacion(int kmConducidos, int esVip) {
+
+		double descuentoVip = 0.95;
+		
+		//variables de tipo de facturacion
+		double tipoFacturacion1 = (kmConducidos - 300) * 0.30 + (200);
+		double tipoFacturacion2 = (kmConducidos - 1000) * 0.15 + (300 + 200);
+		
+		//Cálculo facturación y visualización del total
+		if (kmConducidos < 300 && esVip == 1)
+		System.out.println("Total:" + 200 * descuentoVip );
+		
+		else if (kmConducidos < 300 && esVip == 2)
+		System.out.println("Total: " + 200);
+		
+		else if (kmConducidos >= 300 && kmConducidos <= 1000 && esVip == 2 )
+		System.out.println("Total no vip: " + (tipoFacturacion1 * 1.21));
+		
+		else if (kmConducidos >= 300 && kmConducidos <= 1000 && esVip == 1)
+		System.out.println("Total:" + (tipoFacturacion1 * 0.95) * 1.21 );
+		
+		else if (kmConducidos > 1000 && esVip == 2)
+		System.out.println("Total no vip" + (tipoFacturacion2 * 1.21));
+		
+		else if (kmConducidos > 1000 && esVip == 1)
+		System.out.println("Total vip: " + (tipoFacturacion2 * 0.95 ) * 1.21 );
+				
 	}
 
 }
