@@ -36,5 +36,5 @@ public class GitColaborativo {
         } else {
             return (vip == 1) ? (p2 * descVip) * 1.21 : p2 * 1.21;
         }
-
+	}
 }
