@@ -40,13 +40,13 @@ public class GitColaborativo {
 		System.out.println("Total no vip: " + (tarifa1 * 1.21));
 		
 		else if((km >= variableKm2) && (km <= variableKm1) && (vip == 1))
-		System.out.println("Total:" + (tarifa1 * 0.95) * 1.21 );
+		System.out.println("Total:" + (tarifa1 * descvip) * 1.21 );
 		
 		else if((km > variableKm1) && (vip == 2))
 		System.out.println("Total no vip" + (tarifa2 * 1.21));
 		
 		else if((km > variableKm1) && (vip == 1))
-		System.out.println("Total vip: " + (tarifa2 * 0.95 ) * 1.21 );
+		System.out.println("Total vip: " + (tarifa2 * descvip ) * 1.21 );
 			
 		sc.close();
 	

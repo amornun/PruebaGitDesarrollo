@@ -19,3 +19,4 @@ Cambios:
 Cambiado nombre de variables p1 y p2, por tarifa1 y tarifa2
 Añadido número de kms como variable general
 Añadido variables precio por km
+Añadido la variavle descvip a las formulas
