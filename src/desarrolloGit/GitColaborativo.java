@@ -20,23 +20,27 @@ public class GitColaborativo {
 		double tarifa1 = (km - 300) * 0.30 + (200);
 		double tarifa2 = (km - 1000) * 0.15 + (300 + 200);
 		
+		// variables km
+		int variableKm1 = 1000;
+		int variableKm2 = 300;
+
 		//Cálculo facturación y visualización del total
-		if((km < 300) && (vip == 1))
+		if((km < variableKm2) && (vip == 1))
 		System.out.println("Total:" + 200 * descvip );
 		
-		else if((km < 300) && (vip == 2))
+		else if((km < variableKm2) && (vip == 2))
 		System.out.println("Total: " + 200);
 		
-		else if((km >=300) && (km <= 1000) && (vip == 2 ))
+		else if((km >=variableKm2) && (km <= variableKm1) && (vip == 2 ))
 		System.out.println("Total no vip: " + (tarifa1 * 1.21));
 		
-		else if((km >= 300) && (km <= 1000) && (vip == 1))
+		else if((km >= variableKm2) && (km <= variableKm1) && (vip == 1))
 		System.out.println("Total:" + (tarifa1 * 0.95) * 1.21 );
 		
-		else if((km > 1000) && (vip == 2))
+		else if((km > variableKm1) && (vip == 2))
 		System.out.println("Total no vip" + (tarifa2 * 1.21));
 		
-		else if((km > 1000) && (vip == 1))
+		else if((km > variableKm1) && (vip == 1))
 		System.out.println("Total vip: " + (tarifa2 * 0.95 ) * 1.21 );
 			
 		sc.close();

@@ -16,4 +16,5 @@ El algoritmo determina y muestra el precio final a pagar por el alquiler de un v
 Cambios:
 
 
-cambiado nombre de variables p1 y p2, por tarifa1 y tarifa2
+Cambiado nombre de variables p1 y p2, por tarifa1 y tarifa2
+Añadido número de kms como variable general
