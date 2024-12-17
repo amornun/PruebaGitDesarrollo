@@ -6,6 +6,7 @@ public class GitColaborativo {
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
 		
+		final int CANTFIJA=200;
 		final double DESCVIP = 0.95;
 		
 		//cliente introduce los km
@@ -17,15 +18,15 @@ public class GitColaborativo {
 		int vip = sc.nextInt();
 		
 		//variables de tipo de facturacion
-		double p1 = (km - 300) * 0.30 + (200);
-		double p2 = (km - 1000) * 0.15 + (300 + 200);
+		double p1 = (km - 300) * 0.30 + (CANTFIJA);
+		double p2 = (km - 1000) * 0.15 + (300 + CANTFIJA);
 		
 		//Cálculo facturación y visualización del total
 		if((km < 300) && (vip == 1)){
-		System.out.println("Total:" + 200 * DESCVIP );
+		System.out.println("Total:" + CANTFIJA * DESCVIP );
 		}
 		else if((km < 300) && (vip == 2)){
-		System.out.println("Total: " + 200);
+		System.out.println("Total: " + CANTFIJA);
 		}
 		else if((km >=300) && (km <= 1000) && (vip == 2 )){
 		System.out.println("Total no vip: " + (p1 * 1.21));
