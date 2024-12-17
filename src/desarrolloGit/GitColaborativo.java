@@ -3,6 +3,11 @@ import java.util.Scanner;
 
 public class GitColaborativo {
 
+	//+"€" añadido para que quede mas bonito
+
+	//comentario añadido al inicio de la declaración de variables
+
+	
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
 		
@@ -22,22 +27,22 @@ public class GitColaborativo {
 		
 		//Cálculo facturación y visualización del total
 		if((km < 300) && (vip == 1))
-		System.out.println("Total:" + 200 * descvip );
+		System.out.println("Total:" + 200 * descvip +"€");
 		
-		else if((km < 300) && (vip == 2))
-		System.out.println("Total: " + 200);
+		else if((km < 300) && (vip == 2)+"€")
+		System.out.println("Total: " + 200+"€");
 		
-		else if((km >=300) && (km <= 1000) && (vip == 2 ))
-		System.out.println("Total no vip: " + (p1 * 1.21));
+		else if((km >=300) && (km <= 1000) && (vip == 2 )+"€")
+		System.out.println("Total no vip: " + (p1 * 1.21)+"€");
 		
-		else if((km >= 300) && (km <= 1000) && (vip == 1))
-		System.out.println("Total:" + (p1 * 0.95) * 1.21 );
+		else if((km >= 300) && (km <= 1000) && (vip == 1)+"€")
+		System.out.println("Total:" + (p1 * 0.95) * 1.21 +"€");
 		
 		else if((km > 1000) && (vip == 2))
-		System.out.println("Total no vip" + (p2 * 1.21));
+		System.out.println("Total no vip" + (p2 * 1.21)+"€");
 		
 		else if((km > 1000) && (vip == 1))
-		System.out.println("Total vip: " + (p2 * 0.95 ) * 1.21 );
+		System.out.println("Total vip: " + (p2 * 0.95 ) * 1.21 +"€");
 			
 		sc.close();
 	
