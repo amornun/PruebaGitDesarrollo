@@ -5,9 +5,14 @@ public class GitColaborativo {
 
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
+<<<<<<< HEAD
 		
 		final int CANTFIJA=200;
 		final double DESCVIP = 0.95;
+=======
+		//comentario añadido al inicio de la declaración de variables
+		double descvip = 0.95;
+>>>>>>> c01f1561e61e422d7e03edf68cbc611e0d58423e
 		
 		//cliente introduce los km
 		System.out.println("Introduzca el numero de km que ha conducido: ");
