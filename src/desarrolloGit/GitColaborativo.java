@@ -7,7 +7,9 @@ public class GitColaborativo {
 		var sc = new Scanner(System.in);
 		
 		double descvip = 0.95;
-		
+		double cantfija = 200;
+		double iva = 1.21;
+
 		//cliente introduce los km
 		System.out.println("Introduzca el numero de km que ha conducido: ");
 		int km = sc.nextInt();
@@ -22,22 +24,22 @@ public class GitColaborativo {
 		
 		//Cálculo facturación y visualización del total
 		if((km < 300) && (vip == 1))
-		System.out.println("Total:" + 200 * descvip );
+		System.out.println("Total:" + cantfija * descvip );
 		
 		else if((km < 300) && (vip == 2))
-		System.out.println("Total: " + 200);
+		System.out.println("Total: " + cantfija);
 		
 		else if((km >=300) && (km <= 1000) && (vip == 2 ))
-		System.out.println("Total no vip: " + (p1 * 1.21));
+		System.out.println("Total no vip: " + (p1 * iva));
 		
 		else if((km >= 300) && (km <= 1000) && (vip == 1))
-		System.out.println("Total:" + (p1 * 0.95) * 1.21 );
+		System.out.println("Total:" + (p1 * 0.95) * iva );
 		
 		else if((km > 1000) && (vip == 2))
-		System.out.println("Total no vip" + (p2 * 1.21));
+		System.out.println("Total no vip" + (p2 * iva));
 		
 		else if((km > 1000) && (vip == 1))
-		System.out.println("Total vip: " + (p2 * 0.95 ) * 1.21 );
+		System.out.println("Total vip: " + (p2 * 0.95 ) * iva );
 			
 		sc.close();
 	

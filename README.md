@@ -11,3 +11,8 @@ Si el cliente es usuario vip de la compañía se le aplica un 5% de descuento.
 El precio final debe incluir el 21% del impuesto general a las ventas, IVA. 
 
 El algoritmo determina y muestra el precio final a pagar por el alquiler de un vehículo.
+
+## Cambios realizados
+
+Variable para la cantidad fija
+Variable para el IVA
