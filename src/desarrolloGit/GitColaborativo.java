@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class GitColaborativo {
 
 	public static void main(String[] args) {
+		//comentario añadido al inicio de la declaración de variables
 		var sc = new Scanner(System.in);
 		
 		double descvip = 0.95;
