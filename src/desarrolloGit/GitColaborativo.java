@@ -21,23 +21,28 @@ public class GitColaborativo {
 		double p2 = (km - 1000) * 0.15 + (300 + 200);
 		
 		//Cálculo facturación y visualización del total
-		if((km < 300) && (vip == 1))
-		System.out.println("Total:" + 200 * descvip );
+		switch(vip){
+			case 1:
+				if(km < 300){
+					System.out.println("Total:" + 200 * descvip );
+				}else if (km >= 300 && km <= 1000){
+					System.out.println("Total:" + (p1 * 0.95) * 1.21 );
+				}else if(km > 1000){
+					System.out.println("Total vip: " + (p2 * 0.95 ) * 1.21 );
+				}
+				break;
+				case 2:
+					if(km < 300){
+					System.out.println("Total: " + 200);
+				}else if (km >= 300 && km <= 1000){
+					System.out.println("Total no vip: " + (p1 * 1.21));
+				}else if(km > 1000){
+					System.out.println("Total no vip" + (p2 * 1.21));
+				}
+					break;
+		}
 		
-		else if((km < 300) && (vip == 2))
-		System.out.println("Total: " + 200);
 		
-		else if((km >=300) && (km <= 1000) && (vip == 2 ))
-		System.out.println("Total no vip: " + (p1 * 1.21));
-		
-		else if((km >= 300) && (km <= 1000) && (vip == 1))
-		System.out.println("Total:" + (p1 * 0.95) * 1.21 );
-		
-		else if((km > 1000) && (vip == 2))
-		System.out.println("Total no vip" + (p2 * 1.21));
-		
-		else if((km > 1000) && (vip == 1))
-		System.out.println("Total vip: " + (p2 * 0.95 ) * 1.21 );
 			
 		sc.close();
 	
