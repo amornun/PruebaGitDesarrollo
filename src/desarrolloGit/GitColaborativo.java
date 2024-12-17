@@ -5,7 +5,7 @@ public class GitColaborativo {
 
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
-		
+		//comentario añadido al inicio de la declaración de variables
 		double descvip = 0.95;
 		
 		//cliente introduce los km
