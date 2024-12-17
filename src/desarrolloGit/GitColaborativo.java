@@ -4,6 +4,9 @@ import java.util.Scanner;
 public class GitColaborativo {
 
 	//+"€" añadido para que quede mas bonito
+
+	//comentario añadido al inicio de la declaración de variables
+
 	
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
