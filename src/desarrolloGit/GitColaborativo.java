@@ -4,9 +4,15 @@ import java.util.Scanner;
 public class GitColaborativo {
 
 	public static void main(String[] args) {
+		//comentario añadido al inicio de la declaración de variables
 		var sc = new Scanner(System.in);
 		
-		double descvip = 0.95;
+		final double iva = 1.21;
+		final double descvip = 0.95;
+		final double costeAdicional1 = 0.30;
+		final double costeAdicional2 = 0.15;
+		final int sobreKilometros1 = 300;
+		final int sobreKilometros2 = 1000;
 		
 		//cliente introduce los km
 		System.out.println("Introduzca el numero de km que ha conducido: ");
@@ -17,27 +23,32 @@ public class GitColaborativo {
 		int vip = sc.nextInt();
 		
 		//variables de tipo de facturacion
-		double p1 = (km - 300) * 0.30 + (200);
-		double p2 = (km - 1000) * 0.15 + (300 + 200);
+		double p1 = (km - sobreKilometros1) * costeAdicional1 + (200);
+		double p2 = (km - sobreKilometros2) * costeAdicional2 + (300 + 200);
 		
-		//Cálculo facturación y visualización del total
-		if((km < 300) && (vip == 1))
+		//(if y else)Cálculo facturación y visualización del total
+		if((km < sobreKilometros1) && (vip == 1))
 		System.out.println("Total:" + 200 * descvip );
 		
-		else if((km < 300) && (vip == 2))
+		//Si el cliente no es Vip y es menos de 300 km
+		else if((km < sobreKilometros1) && (vip == 2))
 		System.out.println("Total: " + 200);
 		
-		else if((km >=300) && (km <= 1000) && (vip == 2 ))
-		System.out.println("Total no vip: " + (p1 * 1.21));
+		//Si el cliente no es vip y sobrepasa los 300 km pero no los 1000 km
+		else if((km >= sobreKilometros1) && (km <= sobreKilometros2) && (vip == 2 ))
+		System.out.println("Total no vip: " + (p1 * iva));
 		
-		else if((km >= 300) && (km <= 1000) && (vip == 1))
-		System.out.println("Total:" + (p1 * 0.95) * 1.21 );
+		//Si el cliente es vip y sobrepasa los 300 km pero no los 1000 km
+		else if((km >= sobreKilometros1 ) && (km <= sobreKilometros2) && (vip == 1))
+		System.out.println("Total:" + (p1 * descvip) * iva );
 		
-		else if((km > 1000) && (vip == 2))
-		System.out.println("Total no vip" + (p2 * 1.21));
+		//Si el cliente no es vip y sobre pasa los 1000 km
+		else if((km > sobreKilometros2) && (vip == 2))
+		System.out.println("Total no vip" + (p2 * iva));
 		
-		else if((km > 1000) && (vip == 1))
-		System.out.println("Total vip: " + (p2 * 0.95 ) * 1.21 );
+		//Si el cliente es vip y sobre pasa los 1000 km
+		else if((km > sobreKilometros2) && (vip == 1))
+		System.out.println("Total vip: " + (p2 * descvip) * iva );
 			
 		sc.close();
 	
